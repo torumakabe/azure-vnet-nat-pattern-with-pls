@@ -1,10 +1,10 @@
-# Sample pattern for connecting VNets and On-premise with Private Link Service
+# Sample pattern for connecting VNets and On-premises with Private Link Service
 
 ## Problem statement
 
 * Want to assign many IP addresses to new applications created on Azure, e.g. Containers
 * Want to freely design the network according to new technologies and services
-* On the other hand, need to connect to on-premises or shared services on other virtual networks in Azure
+* On the other hand, need to connect to On-premisess or shared services on other virtual networks in Azure
 * With conventional methods such as peering, the number of IP addresses is insufficient or overlapped
 
 ## Candidate solution
@@ -21,13 +21,13 @@
   * For HTTP(s) with [Application Gateway](https://docs.microsoft.com/en-us/azure/application-gateway/private-link) (New! private preview as of June 2022)
 * Expose multi-tenant managed services with [Private Endpoint](https://docs.microsoft.com/en-us/azure/private-link/private-endpoint-overview)
 
-VNet for projects are able to have the same address space as others and On-premise! You got freedom.
+VNet for projects are able to have the same address space as others and On-premises! You got freedom.
 
 ## Overview of sample
 
 ### Key components
 
-* (Fake)On-premise VNet
+* (Fake)On-premises VNet
   * Client VM
   * DNS Resolver container (zone forwarder for Hub VNet linked DNS)
   * VPN Gateway to Hub VNet (ER is also OK)
@@ -55,7 +55,7 @@ VNet for projects are able to have the same address space as others and On-premi
 
 ```mermaid
 graph TB
-    subgraph VNet-fake-On-premise-10.0.0.0/16
+    subgraph VNet-fake-On-premises-10.0.0.0/16
         vm-client
         vpng-onprem
         aci-onprem-resolver
@@ -104,7 +104,7 @@ graph TB
 
 ## Use cases
 
-### On-premise client to shared web on Hub Vnet
+### On-premises client to shared web on Hub Vnet
 
 ```shell
 myname@mytenant@vm-client:~$ curl https://shared-web.internal.poc --insecure
@@ -116,7 +116,7 @@ This is shared content.
 * Name resolution: OK
 * Shared contents via Private Endpoint: OK
 
-### On-premise client to project web on Project Vnet
+### On-premises client to project web on Project Vnet
 
 ```shell
 myname@mytenant@vm-client:~$ curl http://10.1.0.6
@@ -128,7 +128,7 @@ This is shared content.
 * Reachability: OK
 * Shared contents via Private Endpoint: OK
 
-### SSH from On-premise client to jumpbox VM on Project VNet
+### SSH from On-premises client to jumpbox VM on Project VNet
 
 ```shell
 myname@mytenant@vm-client:~$ az ssh vm --ip 10.1.0.5
@@ -137,7 +137,7 @@ Welcome to Ubuntu 20.04.4 LTS (GNU/Linux 5.13.0-1025-azure x86_64)
 ```
 
 * Reachability: OK
-* [SSH with Azure AD auth](<https://docs.microsoft.com/en-us/azure/active-directory/fundamentals/auth-ssh)(no> need to manage certificate and local account): OK
+* [SSH with Azure AD auth](https://docs.microsoft.com/en-us/azure/active-directory/fundamentals/auth-ssh)(no> need to manage certificate and local account): OK
 
 ### Jumpbox VM to Project web on the same VNet
 

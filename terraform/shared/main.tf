@@ -52,7 +52,7 @@ resource "random_string" "vpngw_shared_key" {
   special = false
 }
 
-// (fake) On-premise VNet
+// (fake) On-premises VNet
 
 resource "azurerm_virtual_network" "onprem" {
   name                = "vnet-onprem"
