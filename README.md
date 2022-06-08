@@ -35,6 +35,8 @@ VNet for projects are able to have the same address space as others and On-premi
   * VPN Gateway to Op-Premise VNet
   * DNS Resolver container (Alternative: [Azure DNS Privete Resolver](https://docs.microsoft.com/en-us/azure/dns/dns-private-resolver-overview))
   * Linked private DNS zone
+    * For shared service: internal.poc
+    * For multi tenant managed service: privatelink.file.core.windows.net
   * Shared Web service container (with TLS self-signed)
   * Private Link Service to shared web service with Application Gateway
   * Private Endpoint to Project VNet
@@ -48,6 +50,8 @@ VNet for projects are able to have the same address space as others and On-premi
     * for shared web service
   * Private Endpoint to multi tenant managed service
   * Linked private DNS zone
+    * For shared service: internal.poc
+    * For multi tenant managed service: privatelink.file.core.windows.net
 * Multi tenant managed service
   * Shared contents on Azure Storage file share
 
@@ -148,7 +152,7 @@ myname@mytenant@vm-jumpbox:~$ curl http://10.0.16.4/shared/shared.html
 This is shared content.
 ```
 
-* Name resolution: OK
+* Reachability: OK
 * Shared contents via Private Endpoint: OK
 
 ### Jumpbox VM on Project VNet to shared web on Hub VNet
