@@ -17,8 +17,8 @@
 ## Solution
 
 * Connect VNets (expose endpoints) with [Private Link Service](https://docs.microsoft.com/en-us/azure/private-link/private-link-overview)
-  * For VM/VMSS with Azure LB
-  * For HTTP(s) with [Application Gateway](https://docs.microsoft.com/en-us/azure/application-gateway/private-link) (New! private preview as of June 2022)
+  * for VM/VMSS with Azure LB
+  * for HTTP(s) with [Application Gateway](https://docs.microsoft.com/en-us/azure/application-gateway/private-link) (New! private preview as of June 2022)
 * Expose multi-tenant managed services with [Private Endpoint](https://docs.microsoft.com/en-us/azure/private-link/private-endpoint-overview)
 
 VNet for projects are able to have the same address space as others and On-premises! You got freedom.
@@ -35,8 +35,8 @@ VNet for projects are able to have the same address space as others and On-premi
   * VPN Gateway to On-premise VNet
   * DNS Resolver container (Alternative: [Azure DNS Privete Resolver](https://docs.microsoft.com/en-us/azure/dns/dns-private-resolver-overview))
   * Linked private DNS zone
-    * For shared service: internal.poc
-    * For multi tenant managed service: privatelink.file.core.windows.net
+    * for shared service: internal.poc
+    * for multi tenant managed service: privatelink.file.core.windows.net
   * Shared Web service container (with TLS self-signed)
   * Private Link Service to shared web service with Application Gateway
   * Private Endpoint to Project VNet
@@ -50,8 +50,8 @@ VNet for projects are able to have the same address space as others and On-premi
     * for shared web service
   * Private Endpoint to multi tenant managed service
   * Linked private DNS zone
-    * For shared service: internal.poc
-    * For multi tenant managed service: privatelink.file.core.windows.net
+    * for shared service: internal.poc
+    * for multi tenant managed service: privatelink.file.core.windows.net
 * Multi tenant managed service
   * Shared contents on Azure Storage file share
 
