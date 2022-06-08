@@ -5,7 +5,7 @@
 * Want to assign many IP addresses to new applications created on Azure, e.g. Containers
 * Want to freely design the network according to new technologies and services
 * On the other hand, need to connect to on-premises or shared services on other virtual networks in Azure
-* With conventional methods such as peering, the number of IP addresses is insufficient or duplicated
+* With conventional methods such as peering, the number of IP addresses is insufficient or overlapped
 
 ## Candidate solution
 
@@ -137,7 +137,7 @@ Welcome to Ubuntu 20.04.4 LTS (GNU/Linux 5.13.0-1025-azure x86_64)
 ```
 
 * Reachability: OK
-* [SSH with Azure AD auth(<https://docs.microsoft.com/en-us/azure/active-directory/fundamentals/auth-ssh)(no> need to manage certificate and local account): OK
+* [SSH with Azure AD auth](<https://docs.microsoft.com/en-us/azure/active-directory/fundamentals/auth-ssh)(no> need to manage certificate and local account): OK
 
 ### Jumpbox VM to Project web on the same VNet
 
