@@ -162,6 +162,7 @@ myname@mytenant@vm-jumpbox:~$ curl https://shared-web.internal.poc --insecure
 Hello from shared-web
 ```
 
+* Name resolution: OK
 * Reachability: OK
 
 ## Considerations
