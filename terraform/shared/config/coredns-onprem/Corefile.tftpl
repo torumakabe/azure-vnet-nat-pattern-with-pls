@@ -1,0 +1,18 @@
+
+internal.poc {
+  forward . ${RESOLVER_IP}
+  log
+  errors
+}
+
+azurecr.io {
+  forward . ${RESOLVER_IP}
+  log
+  errors
+}
+
+. {
+  forward . 168.63.129.16
+  log
+  errors
+}
