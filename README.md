@@ -137,7 +137,7 @@ Welcome to Ubuntu 20.04.4 LTS (GNU/Linux 5.13.0-1025-azure x86_64)
 ```
 
 * Reachability: OK
-* [SSH with Azure AD auth](https://docs.microsoft.com/en-us/azure/active-directory/fundamentals/auth-ssh)(no> need to manage certificate and local account): OK
+* [SSH with Azure AD auth](https://docs.microsoft.com/en-us/azure/active-directory/fundamentals/auth-ssh)(no need to manage certificate and local account): OK
 
 ### Jumpbox VM to Project web on the same VNet
 
