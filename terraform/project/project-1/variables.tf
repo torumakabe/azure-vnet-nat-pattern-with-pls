@@ -19,16 +19,18 @@ variable "admin_username" {
   sensitive = true
 }
 
+/*
 variable "shared_rg" {
   type = object({
     name     = string
     location = string
   })
   default = {
-    name     = "rg-vnet-nat-pattern-with-pl-project-1"
+    name     = "rg-vnet-nat-pattern-with-pl-shared"
     location = "japaneast"
   }
 }
+*/
 
 variable "shared_endpoint_agw" {
   type = object({

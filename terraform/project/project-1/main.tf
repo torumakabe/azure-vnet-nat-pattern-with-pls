@@ -410,8 +410,8 @@ resource "azurerm_application_gateway" "project" {
 
 resource "azurerm_private_endpoint" "agw_hub_project" {
   name                = "pe-agw-hub-to-prj1"
-  resource_group_name = var.shared_rg.name
-  location            = var.shared_rg.location
+  resource_group_name = azurerm_resource_group.project.name
+  location            = azurerm_resource_group.project.location
   subnet_id           = var.shared_endpoint_agw.subnet_id
 
   private_service_connection {
@@ -502,8 +502,8 @@ resource "azurerm_private_link_service" "project_lbi" {
 
 resource "azurerm_private_endpoint" "lbi_hub_to_project" {
   name                = "pe-lbi-hub-to-prj1"
-  resource_group_name = var.shared_rg.name
-  location            = var.shared_rg.location
+  resource_group_name = azurerm_resource_group.project.name
+  location            = azurerm_resource_group.project.location
   subnet_id           = var.shared_endpoint_agw.subnet_id
 
   private_service_connection {

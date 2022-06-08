@@ -169,3 +169,6 @@ Hello from shared-web
   * Simple: One Azure Firewall per Project VNet
   * Shared: Share one Azure Firewall with multiple projects
     * Need peering, so lose the freedom of network design (trade-off!)
+* Resouce grouping, ownership and permissions
+  * There are resources such as endpoints that are difficult to decide whether to put in a shared group or a project.
+  * Consider the onwership and delegation of work when the project increases and during operation
