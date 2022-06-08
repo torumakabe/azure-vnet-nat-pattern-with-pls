@@ -45,7 +45,7 @@ VNet for projects are able to have the same address space as others and On-premi
 * Project VNet
   * Jumpbox VM
   * Project web service
-  * rivate Link Service to projct web service with Application Gateway
+  * Private Link Service to projct web service with Application Gateway
   * Private Endpoint to Hub VNet
     * for shared web service
   * Private Endpoint to multi tenant managed service
