@@ -32,7 +32,7 @@ VNet for projects are able to have the same address space as others and On-premi
   * DNS Resolver container (zone forwarder for Hub VNet linked DNS)
   * VPN Gateway to Hub VNet (ER is also OK)
 * Hub VNet
-  * VPN Gateway to Op-Premise VNet
+  * VPN Gateway to On-premise VNet
   * DNS Resolver container (Alternative: [Azure DNS Privete Resolver](https://docs.microsoft.com/en-us/azure/dns/dns-private-resolver-overview))
   * Linked private DNS zone
     * For shared service: internal.poc
