@@ -493,7 +493,6 @@ resource "azurerm_private_link_service" "project_lbi" {
 
   nat_ip_configuration {
     name = "primary"
-    // private_ip_address         = azurerm_network_interface.jumpbox.private_ip_address
     private_ip_address_version = "IPv4"
     subnet_id                  = azurerm_subnet.project_default.id
     primary                    = true
