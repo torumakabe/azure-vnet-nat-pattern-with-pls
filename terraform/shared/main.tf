@@ -368,7 +368,6 @@ resource "azurerm_subnet" "hub_default" {
   resource_group_name                            = azurerm_resource_group.shared.name
   virtual_network_name                           = azurerm_virtual_network.hub.name
   address_prefixes                               = [module.hub_vnet_subnet_addrs.network_cidr_blocks["default"]]
-  enforce_private_link_endpoint_network_policies = true
 }
 
 resource "azurerm_subnet" "hub_aci" {
@@ -426,7 +425,6 @@ resource "azurerm_subnet" "hub_pl" {
   resource_group_name                           = azurerm_resource_group.shared.name
   virtual_network_name                          = azurerm_virtual_network.hub.name
   address_prefixes                              = [module.hub_vnet_subnet_addrs.network_cidr_blocks["pl"]]
-  enforce_private_link_service_network_policies = true
 }
 
 resource "azurerm_public_ip" "hub_vpngw" {
