@@ -72,8 +72,6 @@ resource "azurerm_subnet" "project_default" {
   resource_group_name                            = azurerm_resource_group.project.name
   virtual_network_name                           = azurerm_virtual_network.project.name
   address_prefixes                               = [module.project_vnet_subnet_addrs.network_cidr_blocks["default"]]
-  enforce_private_link_endpoint_network_policies = true
-  enforce_private_link_service_network_policies  = true
 }
 
 resource "azurerm_subnet" "project_aci" {
@@ -119,7 +117,6 @@ resource "azurerm_subnet" "project_pl" {
   resource_group_name                           = azurerm_resource_group.project.name
   virtual_network_name                          = azurerm_virtual_network.project.name
   address_prefixes                              = [module.project_vnet_subnet_addrs.network_cidr_blocks["pl"]]
-  enforce_private_link_service_network_policies = true
 }
 
 resource "azurerm_network_security_group" "default" {
